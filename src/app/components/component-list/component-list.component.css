@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.list-table {
+  width: auto;
+}
+
+.mat-column-image-id {
+  width: 32px;
+  border-radius: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-image-author {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+a {
+  min-width: 40px;
+  min-height: 40px;
+  text-decoration: none;
+}

@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.butoon {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.example-card {
+  max-width: 400px;
+}

@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title><strong>Identifier:</strong> {{image.id}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image class="rounded" src="{{image.download_url}}" alt="">
+    <mat-card-content>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          Show all details
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+          <p><strong>Author:</strong> {{image.author}}</p>
+          <p><strong>Url:</strong> {{image.url}}</p>
+          <p><strong>Size:</strong> {{image.width}} - {{image.height}}</p>
+        </ng-template>
+      </mat-expansion-panel>
+    </mat-card-content>
+  </mat-card>
+  <div class="butoon">
+    <a routerLink="/" class="btn btn-danger">Back</a>
+  </div>
+</div>

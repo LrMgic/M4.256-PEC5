@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Images</h1>
+  <table mat-table *ngIf="images.length" [dataSource]="images" class="mat-elevation-z8 list-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="image-id">
+      <th mat-header-cell *matHeaderCellDef> ID. </th>
+      <td mat-cell *matCellDef="let image" [routerLink]="['/image/', image.id]"> {{image.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="image-author">
+      <th mat-header-cell *matHeaderCellDef> Author </th>
+      <td mat-cell *matCellDef="let image" [routerLink]="['/image/', image.id]"> {{image.author}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row @fadeOut *matRowDef="let  row; columns: displayedColumns;"></tr>
+  </table>
+</div>
