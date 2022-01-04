@@ -111,7 +111,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/Ex1/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
@@ -136,6 +136,39 @@
           "builder": "@angular-devkit/build-angular:app-shell",
           "options": {
             "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Ex1:build:production",
+              "serverTarget": "Ex1:server:production"
+            },
+            "development": {
+              "browserTarget": "Ex1:build:development",
+              "serverTarget": "Ex1:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "Ex1:build:development",
+              "serverTarget": "Ex1:server:development"
+            },
+            "production": {
+              "browserTarget": "Ex1:build:production",
+              "serverTarget": "Ex1:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
           },
           "configurations": {
             "production": {
